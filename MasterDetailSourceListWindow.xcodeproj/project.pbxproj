@@ -10,6 +10,10 @@
 		55DE0E3F1CD693330036447D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE0E3E1CD693330036447D /* AppDelegate.swift */; };
 		55DE0E411CD693330036447D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55DE0E401CD693330036447D /* Assets.xcassets */; };
 		55DE0E441CD693330036447D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55DE0E421CD693330036447D /* MainMenu.xib */; };
+		55DE0E4D1CD693D80036447D /* MasterDetailSourceListWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE0E4B1CD693D80036447D /* MasterDetailSourceListWindowController.swift */; };
+		55DE0E4E1CD693D80036447D /* MasterDetailSourceListWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55DE0E4C1CD693D80036447D /* MasterDetailSourceListWindowController.xib */; };
+		55DE0E521CD699410036447D /* RedTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE0E501CD699410036447D /* RedTestViewController.swift */; };
+		55DE0E531CD699410036447D /* RedTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55DE0E511CD699410036447D /* RedTestViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +22,10 @@
 		55DE0E401CD693330036447D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55DE0E431CD693330036447D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		55DE0E451CD693330036447D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55DE0E4B1CD693D80036447D /* MasterDetailSourceListWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterDetailSourceListWindowController.swift; sourceTree = SOURCE_ROOT; };
+		55DE0E4C1CD693D80036447D /* MasterDetailSourceListWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MasterDetailSourceListWindowController.xib; sourceTree = SOURCE_ROOT; };
+		55DE0E501CD699410036447D /* RedTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedTestViewController.swift; sourceTree = "<group>"; };
+		55DE0E511CD699410036447D /* RedTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RedTestViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +43,7 @@
 			isa = PBXGroup;
 			children = (
 				55DE0E3D1CD693330036447D /* MasterDetailSourceListWindow */,
+				55DE0E4F1CD693FD0036447D /* Resources */,
 				55DE0E3C1CD693330036447D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,10 +60,22 @@
 			isa = PBXGroup;
 			children = (
 				55DE0E3E1CD693330036447D /* AppDelegate.swift */,
-				55DE0E401CD693330036447D /* Assets.xcassets */,
 				55DE0E421CD693330036447D /* MainMenu.xib */,
+				55DE0E4B1CD693D80036447D /* MasterDetailSourceListWindowController.swift */,
+				55DE0E4C1CD693D80036447D /* MasterDetailSourceListWindowController.xib */,
+				55DE0E501CD699410036447D /* RedTestViewController.swift */,
+				55DE0E511CD699410036447D /* RedTestViewController.xib */,
+			);
+			path = MasterDetailSourceListWindow;
+			sourceTree = "<group>";
+		};
+		55DE0E4F1CD693FD0036447D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				55DE0E401CD693330036447D /* Assets.xcassets */,
 				55DE0E451CD693330036447D /* Info.plist */,
 			);
+			name = Resources;
 			path = MasterDetailSourceListWindow;
 			sourceTree = "<group>";
 		};
@@ -116,8 +137,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55DE0E531CD699410036447D /* RedTestViewController.xib in Resources */,
 				55DE0E411CD693330036447D /* Assets.xcassets in Resources */,
 				55DE0E441CD693330036447D /* MainMenu.xib in Resources */,
+				55DE0E4E1CD693D80036447D /* MasterDetailSourceListWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,7 +151,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55DE0E521CD699410036447D /* RedTestViewController.swift in Sources */,
 				55DE0E3F1CD693330036447D /* AppDelegate.swift in Sources */,
+				55DE0E4D1CD693D80036447D /* MasterDetailSourceListWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

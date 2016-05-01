@@ -10,12 +10,11 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
-	@IBOutlet weak var window: NSWindow!
-
-
+	var helpWindow : MasterDetailSourceListWindowController?
+	
 	func applicationDidFinishLaunching(aNotification: NSNotification) {
-		// Insert code here to initialize your application
+		helpWindow = MasterDetailSourceListWindowController( viewControllers: [ RedTestViewController(title: "One")!, RedTestViewController(title: "Two")! ] )
+		helpWindow!.showWindow( self )
 	}
 
 	func applicationWillTerminate(aNotification: NSNotification) {
