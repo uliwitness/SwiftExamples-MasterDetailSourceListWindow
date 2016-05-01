@@ -57,9 +57,31 @@ public class MasterDetailSourceListWindowController: NSWindowController, NSOutli
 		}
 	}
 	
+	public func outlineView(outlineView: NSOutlineView, isItemExpandable item: AnyObject) -> Bool
+	{
+		return false
+	}
+	
 	public func outlineView(outlineView: NSOutlineView, viewForTableColumn tableColumn: NSTableColumn?, item: AnyObject) -> NSView? {
 		let	cell : NSTableCellView = sourceListView.makeViewWithIdentifier( "DataCell", owner: self ) as! NSTableCellView
 		cell.objectValue = item
 		return cell
+	}
+	
+	public func outlineViewSelectionDidChange(notification: NSNotification)
+	{
+		detailView.subviews.removeAll()
+		
+		if sourceListView.selectedRow >= 0
+		{
+			let nextViewController = viewControllers[sourceListView.selectedRow]
+			let theView = nextViewController.view;
+			detailView.addSubview(theView)
+			
+			
+			detailView.addConstraints( NSLayoutConstraint.constraintsWithVisualFormat( "|[theView]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["theView": theView]) )
+			detailView.addConstraints( NSLayoutConstraint.constraintsWithVisualFormat( "V:|[theView]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["theView": theView]) )
+
+		}
 	}
 }
