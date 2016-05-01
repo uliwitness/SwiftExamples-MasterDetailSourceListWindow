@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="MasterDetailSourceListWindowController" customModule="MasterDetailSourceListWindow" customModuleProvider="target">
+        <customObject id="-2" userLabel="File's Owner" customClass="MasterDetailSourceListWindowController" customModule="HelpWindow" customModuleProvider="target">
             <connections>
                 <outlet property="detailView" destination="Okr-mn-WWe" id="mhn-1p-P7G"/>
                 <outlet property="sourceListView" destination="J7a-d8-g9E" id="8QW-lA-bIy"/>
@@ -23,14 +23,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="674" height="463"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <scrollView autohidesScrollers="YES" horizontalLineScroll="26" horizontalPageScroll="10" verticalLineScroll="26" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaX-Qf-noj">
+                    <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaX-Qf-noj">
                         <rect key="frame" x="-1" y="-1" width="187" height="465"/>
                         <clipView key="contentView" drawsBackground="NO" id="W3J-iB-CYQ">
                             <rect key="frame" x="1" y="1" width="185" height="463"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" rowSizeStyle="automatic" viewBased="YES" indentationPerLevel="16" outlineTableColumn="S3x-cB-ZS4" id="J7a-d8-g9E">
-                                    <rect key="frame" x="0.0" y="0.0" width="185" height="463"/>
+                                <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" viewBased="YES" indentationPerLevel="16" outlineTableColumn="S3x-cB-ZS4" id="J7a-d8-g9E">
+                                    <rect key="frame" x="0.0" y="0.0" width="185" height="0.0"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
                                     <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
