@@ -12,10 +12,12 @@ import Cocoa
 public class MasterSourceListItem: NSObject {
 	var	viewController: NSViewController?
 	var image: NSImage?
-	public init( viewController inVC: NSViewController, image inImage: NSImage ) {
+	var isGroup: Bool = false
+	public init( viewController inVC: NSViewController, image inImage: NSImage, group inIsGroup: Bool = false ) {
 		super.init()
 		viewController = inVC
 		image = inImage
+		isGroup = inIsGroup
 	}
 }
 
@@ -74,8 +76,19 @@ public class MasterDetailSourceListWindowController: NSWindowController, NSOutli
 		return false
 	}
 	
+	public func outlineView(outlineView: NSOutlineView, isGroupItem item: AnyObject) -> Bool
+	{
+		let isGroupBool : Bool = item.isGroup
+		return isGroupBool
+	}
+	
 	public func outlineView(outlineView: NSOutlineView, viewForTableColumn tableColumn: NSTableColumn?, item: AnyObject) -> NSView? {
-		let	cell : NSTableCellView = sourceListView.makeViewWithIdentifier( "DataCell", owner: self ) as! NSTableCellView
+		var cellIdentifier: String = "DataCell"
+		if item.isGroup!
+		{
+			cellIdentifier = "HeaderCell"
+		}
+		let	cell : NSTableCellView = sourceListView.makeViewWithIdentifier( cellIdentifier, owner: self ) as! NSTableCellView
 		cell.objectValue = item
 		return cell
 	}
