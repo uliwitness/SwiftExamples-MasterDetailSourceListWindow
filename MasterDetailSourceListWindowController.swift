@@ -8,12 +8,23 @@
 
 import Cocoa
 
+
+public class MasterSourceListItem: NSObject {
+	var	viewController: NSViewController?
+	var image: NSImage?
+	public init( viewController inVC: NSViewController, image inImage: NSImage ) {
+		super.init()
+		viewController = inVC
+		image = inImage
+	}
+}
+
 public class MasterDetailSourceListWindowController: NSWindowController, NSOutlineViewDelegate, NSOutlineViewDataSource {
 	@IBOutlet weak var sourceListView: NSOutlineView!
 	@IBOutlet weak var detailView: NSView!
-	var viewControllers : [NSViewController] = []
+	var viewControllers : [MasterSourceListItem] = []
 
-	public init( viewControllers inViewControllers: [NSViewController] )
+	public init( viewControllers inViewControllers: [MasterSourceListItem] )
 	{
 		super.init( window: nil )
 		
@@ -30,6 +41,7 @@ public class MasterDetailSourceListWindowController: NSWindowController, NSOutli
         super.windowDidLoad()
 
 		sourceListView.reloadData()
+		sourceListView.selectRowIndexes( NSIndexSet(index: 0), byExtendingSelection: false );
         // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
     }
     
@@ -74,7 +86,7 @@ public class MasterDetailSourceListWindowController: NSWindowController, NSOutli
 		
 		if sourceListView.selectedRow >= 0
 		{
-			let nextViewController = viewControllers[sourceListView.selectedRow]
+			let nextViewController = viewControllers[sourceListView.selectedRow].viewController!
 			let theView = nextViewController.view;
 			detailView.addSubview(theView)
 			

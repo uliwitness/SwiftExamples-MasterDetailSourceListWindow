@@ -13,7 +13,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	var helpWindow : MasterDetailSourceListWindowController?
 	
 	func applicationDidFinishLaunching(aNotification: NSNotification) {
-		helpWindow = MasterDetailSourceListWindowController( viewControllers: [ RedTestViewController(title: "Reddish")!, GreenTestViewController(title: "Greenish")! ] )
+		helpWindow = MasterDetailSourceListWindowController( viewControllers: [ MasterSourceListItem( viewController: RedTestViewController(title: "Reddish")!, image: NSImage(named: NSImageNameHomeTemplate)!), MasterSourceListItem( viewController: GreenTestViewController(title: "Greenish")!, image: NSImage(named: NSImageNameColorPanel)!) ] )
 		helpWindow!.showWindow( self )
 	}
 

@@ -61,7 +61,7 @@
                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                             </textFieldCell>
                                                             <connections>
-                                                                <binding destination="wC6-8v-MhI" name="value" keyPath="objectValue.title" id="iy0-sf-FwQ"/>
+                                                                <binding destination="wC6-8v-MhI" name="value" keyPath="objectValue.viewController.title" id="uFV-9o-q1a"/>
                                                             </connections>
                                                         </textField>
                                                     </subviews>
@@ -76,6 +76,9 @@
                                                         <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Wt-9C-7WR">
                                                             <rect key="frame" x="3" y="0.0" width="17" height="17"/>
                                                             <imageCell key="cell" refusesFirstResponder="YES" imageScaling="proportionallyDown" image="NSApplicationIcon" id="yVi-RV-d7w"/>
+                                                            <connections>
+                                                                <binding destination="RdN-xi-sgE" name="value" keyPath="objectValue.image" id="KoE-ld-Mbo"/>
+                                                            </connections>
                                                         </imageView>
                                                         <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oln-vm-NZh">
                                                             <rect key="frame" x="25" y="0.0" width="120" height="17"/>
@@ -85,7 +88,7 @@
                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                             </textFieldCell>
                                                             <connections>
-                                                                <binding destination="RdN-xi-sgE" name="value" keyPath="objectValue.title" id="cRZ-Q4-NnP"/>
+                                                                <binding destination="RdN-xi-sgE" name="value" keyPath="objectValue.viewController.title" id="ga3-ml-hZn"/>
                                                             </connections>
                                                         </textField>
                                                     </subviews>
